@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WordCraft AI – NLP Analytics</title>
+    <link rel="stylesheet" href="/static/style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <!-- Header -->
+      <header class="header">
+        <h1>🔥 SummarifyAI</h1>
+        <p class="tagline">
+          Forge insights from text with intelligent NLP processing,
+          visualization, and summarization
+        </p>
+      </header>
+
+      <!-- Input Section -->
+      <section class="input-section">
+        <div class="input-container">
+          <h2>📝 Input Text</h2>
+          <textarea
+            id="textInput"
+            placeholder="Enter your text here for analysis..."
+          ></textarea>
+
+          <div class="controls">
+            <div class="control-group">
+              <label for="tokenType">Tokenization:</label>
+              <select id="tokenType">
+                <option value="word">Word</option>
+                <option value="sentence">Sentence</option>
+                <option value="whitespace">Whitespace</option>
+                <option value="blankline">Blankline</option>
+              </select>
+            </div>
+
+            <div class="control-group">
+              <label for="stemmerType">Stemming:</label>
+              <select id="stemmerType">
+                <option value="None">None</option>
+                <option value="Porter">Porter</option>
+                <option value="Lancaster">Lancaster</option>
+                <option value="Snowball">Snowball</option>
+              </select>
+            </div>
+
+            <div class="control-group">
+              <label for="ngramN">N-Grams (N):</label>
+              <input type="number" id="ngramN" min="1" max="5" value="2" />
+            </div>
+
+            <div class="control-group checkbox-group">
+              <label>
+                <input type="checkbox" id="lemmatizeCheck" /> Lemmatization
+              </label>
+              <label>
+                <input type="checkbox" id="stopwordsCheck" /> Remove Stopwords
+              </label>
+              <label>
+                <input type="checkbox" id="summarizeCheck" /> Text Summarization
+              </label>
+            </div>
+          </div>
+
+          <button id="analyzeBtn" class="analyze-btn">🚀 Analyze Text</button>
+        </div>
+      </section>
+
+      <!-- Loading Indicator -->
+      <div id="loadingIndicator" class="loading" style="display: none">
+        <div class="spinner"></div>
+        <p>Processing your text...</p>
+      </div>
+
+      <!-- Results Section -->
+      <section
+        id="resultsSection"
+        class="results-section"
+        style="display: none"
+      >
+        <h2>📊 Analysis Results</h2>
+
+        <!-- Tab Navigation -->
+        <div class="tab-container">
+          <div class="tab-nav">
+            <button class="tab-btn active" data-tab="tokens">Tokens</button>
+            <button class="tab-btn" data-tab="processing">Processing</button>
+            <button class="tab-btn" data-tab="linguistics">Linguistics</button>
+            <button class="tab-btn" data-tab="visualization">
+              Visualization
+            </button>
+            <button class="tab-btn" data-tab="summary">Summary</button>
+          </div>
+
+          <!-- Tab Content -->
+          <div class="tab-content">
+            <!-- Tokens Tab -->
+            <div id="tokens-tab" class="tab-pane active">
+              <h3>🔤 Tokenization Results</h3>
+              <div class="result-box">
+                <h4>Tokens:</h4>
+                <div id="tokensResult" class="token-list"></div>
+              </div>
+            </div>
+
+            <!-- Processing Tab -->
+            <div id="processing-tab" class="tab-pane">
+              <h3>⚙️ Text Processing</h3>
+              <div class="processing-grid">
+                <div class="result-box">
+                  <h4>Stemmed Words:</h4>
+                  <div id="stemmedResult" class="token-list"></div>
+                </div>
+                <div class="result-box">
+                  <h4>Lemmatized Words:</h4>
+                  <div id="lemmatizedResult" class="token-list"></div>
+                </div>
+                <div class="result-box">
+                  <h4>Filtered Words (No Stopwords):</h4>
+                  <div id="filteredResult" class="token-list"></div>
+                </div>
+                <div class="result-box">
+                  <h4>N-Grams:</h4>
+                  <div id="ngramsResult" class="token-list"></div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Linguistics Tab -->
+            <div id="linguistics-tab" class="tab-pane">
+              <h3>🔍 Linguistic Analysis</h3>
+              <div class="linguistics-grid">
+                <div class="result-box">
+                  <h4>POS Tags:</h4>
+                  <div id="posTagsResult" class="pos-tags"></div>
+                </div>
+                <div class="result-box">
+                  <h4>Named Entities:</h4>
+                  <div id="nerResult" class="ner-list"></div>
+                </div>
+                <div class="result-box">
+                  <h4>Noun Phrase Chunks:</h4>
+                  <div id="chunksResult" class="token-list"></div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Visualization Tab -->
+            <div id="visualization-tab" class="tab-pane">
+              <h3>📈 Visualizations</h3>
+              <div class="viz-grid">
+                <div class="result-box">
+                  <h4>Word Cloud:</h4>
+                  <div id="wordCloudContainer">
+                    <canvas
+                      id="wordCloudCanvas"
+                      width="600"
+                      height="400"
+                    ></canvas>
+                  </div>
+                </div>
+                <div class="result-box">
+                  <h4>Word Frequency Chart:</h4>
+                  <canvas id="frequencyChart" width="400" height="300"></canvas>
+                </div>
+              </div>
+            </div>
+
+            <!-- Summary Tab -->
+            <div id="summary-tab" class="tab-pane">
+              <h3>📋 Text Summary</h3>
+              <div class="result-box">
+                <div id="summaryResult" class="summary-text"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <script src="/static/script.js"></script>
+  </body>
+</html>
