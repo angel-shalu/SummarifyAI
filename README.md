@@ -1,195 +1,194 @@
-# 🔥 TextForge - Advanced NLP Analytics & Visualization
+# 🔥 WordCraft AI – NLP Analytics Platform
 
-<div align="center">
+WordCraft AI is an interactive Natural Language Processing (NLP) web application built with Flask and NLTK.
+It enables advanced text analysis including tokenization, stemming, lemmatization, POS tagging, NER, n-grams, word frequency analysis, and automatic text summarization through a clean web interface.
 
-![TextForge Logo](https://img.shields.io/badge/TextForge-NLP%20Analytics-blue?style=for-the-badge&logo=python&logoColor=white)
+#🚀 Features
+#📝 Text Processing
 
-**A comprehensive Natural Language Processing platform for interactive text analysis and visualization**
+Word, sentence, whitespace, and blank-line tokenization
 
-[![Python](https://img.shields.io/badge/Python-3.7+-blue.svg)](https://python.org)
-[![Flask](https://img.shields.io/badge/Flask-2.3.3-green.svg)](https://flask.palletsprojects.com/)
-[![NLTK](https://img.shields.io/badge/NLTK-3.8.1-orange.svg)](https://nltk.org)
-[![License](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+Stemming (Porter, Lancaster, Snowball)
 
-[Demo](#demo) • [Features](#features) • [Installation](#installation) • [Usage](#usage) • [Contributing](#contributing)
+WordNet-based lemmatization
 
-</div>
+Stopword removal
 
----
+N-gram generation
 
-## 🌟 Features
 
-### 📝 **Text Processing**
-- **Tokenization**: Word, sentence, whitespace, and blankline tokenization
-- **Stemming**: Porter, Lancaster, and Snowball stemmers
-- **Lemmatization**: WordNet-based lemmatization for root word extraction
-- **Stopwords Removal**: Filter out common English stopwords
-- **N-Grams**: Configurable n-gram generation (bigrams, trigrams, etc.)
+# 🔍 Linguistic Analysis
 
-### 🔍 **Linguistic Analysis**
-- **POS Tagging**: Part-of-speech tagging for grammatical analysis
-- **Named Entity Recognition (NER)**: Identify people, organizations, locations
-- **Chunking**: Extract noun phrases and syntactic structures
-- **Word Frequency Analysis**: Statistical analysis of word occurrences
+Part-of-Speech (POS) tagging
 
-### 📊 **Visualizations**
-- **Custom Word Clouds**: Beautiful spiral-pattern word clouds with Canvas
-- **Interactive Charts**: Frequency analysis with Chart.js
-- **Real-time Updates**: Dynamic visualization updates
-- **Responsive Design**: Works on desktop and mobile devices
+Named Entity Recognition (NER)
 
-### 🎯 **Advanced Features**
-- **Text Summarization**: Automatic text summarization using Gensim
-- **Professional UI**: Modern tabbed interface with smooth animations
-- **Error Handling**: Robust error handling and fallback mechanisms
-- **Performance Optimized**: Efficient processing for large texts
+Noun phrase chunking
 
----
+Word frequency analysis
 
-## 🚀 Quick Start
 
-### Prerequisites
-- Python 3.7 or higher
-- pip package manager
+# 📊 NLP Insights
 
-### Installation
+Structured JSON responses
 
-1. **Clone the repository:**
-```bash
-git clone https://github.com/yourusername/textforge-nlp-analytics.git
-cd textforge-nlp-analytics
-```
+Summarized output for long text
 
-2. **Install dependencies:**
-```bash
+Error-handled processing pipeline
+
+
+# 🎯 Advanced
+
+Automatic text summarization (Gensim fallback supported)
+
+Optimized for large text inputs
+
+Robust exception handling
+
+
+# 🛠️ Tech Stack
+# Backend
+
+Python
+
+Flask
+
+NLTK
+
+Gensim
+
+NumPy
+
+SciPy
+
+# Frontend
+
+HTML
+
+CSS
+
+JavaScript
+
+
+# 📦 Installation & Setup
+Prerequisites
+
+Python 3.7+
+
+pip
+
+Steps
+
+
+# Clone the repository
+
+git clone https://github.com/yourusername/WordCraft-AI.git
+cd WordCraft-AI
+
+
+# Install dependencies
+
 pip install -r requirements.txt
-```
 
-3. **Run the application:**
-```bash
-python app.py
-```
-
-4. **Open your browser:**
-Navigate to `http://localhost:5000`
-
----
-
-## 💻 Usage
-
-### Basic Analysis
-1. **Enter Text**: Paste or type your text in the input area
-2. **Configure Options**: Select tokenization method, stemming algorithm, etc.
-3. **Analyze**: Click "🚀 Analyze Text" to process
-4. **Explore Results**: Navigate through different tabs to view results
-
-### Advanced Configuration
-- **Tokenization**: Choose from word, sentence, whitespace, or blankline
-- **Stemming**: Select Porter, Lancaster, or Snowball stemmer
-- **Processing Options**: Enable lemmatization, stopword removal, summarization
-- **N-Grams**: Configure n-gram size (1-5)
-
-### Output Tabs
-- **🔤 Tokens**: View tokenization results
-- **⚙️ Processing**: Stemming, lemmatization, and filtering results
-- **🔍 Linguistics**: POS tags, NER entities, and noun phrase chunks
-- **📈 Visualization**: Interactive word clouds and frequency charts
-- **📋 Summary**: Automatic text summarization
-
----
-
-## 🛠️ Tech Stack
-
-### Backend
-- **Flask**: Lightweight web framework
-- **NLTK**: Natural language processing toolkit
-- **Gensim**: Topic modeling and text summarization
-- **NumPy**: Numerical computing
-- **SciPy**: Scientific computing
-
-### Frontend
-- **HTML5**: Modern markup
-- **CSS3**: Responsive styling with gradients and animations
-- **JavaScript**: Interactive functionality
-- **Chart.js**: Data visualization library
-- **Custom Canvas**: Word cloud rendering
-
----
-
-## 📁 Project Structure
-
-```
-TextForge/
-├── app.py                 # Flask application
-├── requirements.txt       # Python dependencies
-├── README.md             # Project documentation
-├── templates/
-│   └── index.html        # Main HTML template
-├── static/
-│   ├── style.css         # CSS styling
-│   └── script.js         # JavaScript functionality
-└── .vscode/
-    └── launch.json       # VS Code configuration
-```
-
----
-
-## 🔧 Development
-
-### Running in Development Mode
-```bash
-# Set environment variables
-export FLASK_ENV=development
-export FLASK_DEBUG=1
 
 # Run the application
+
 python app.py
-```
 
-### VS Code Setup
-1. Open the project folder in VS Code
-2. Install Python extension
-3. Use `F5` to run with debugging
-4. Or use integrated terminal: `python app.py`
 
----
+# Open in browser
 
-## 📋 Requirements
+http://localhost:5000
 
-```
+
+# 💻 Usage
+
+Open the web application
+
+Enter text in the input area
+
+# Select NLP options:
+
+Tokenization type
+
+Stemming method
+
+Lemmatization
+
+Stopword removal
+
+N-grams
+
+Summarization
+
+Click Analyze
+
+View NLP results and insights
+
+
+# 📁 Project Structure
+WordCraft-AI/
+├── app.py                 # Flask application
+
+├── requirements.txt       # Dependencies
+
+├── README.md              # Documentation
+
+├── templates/
+│   └── index.html         # Frontend UI
+
+├── static/
+│   ├── style.css          # Styling
+
+│   └── script.js          # Client-side logic
+
+
+# 📋 Requirements
 Flask==2.3.3
 nltk==3.8.1
 gensim==4.3.2
 numpy==1.24.3
 scipy==1.10.1
-```
 
----
 
-## 🎯 Use Cases
+# 🎯 Use Cases
 
-- **Academic Research**: Analyze research papers and documents
-- **Content Analysis**: Study blog posts, articles, and social media
-- **Text Mining**: Extract insights from large text datasets
-- **Educational**: Learn NLP concepts interactively
-- **Business Intelligence**: Analyze customer feedback and reviews
+NLP learning & experimentation
 
----
+Academic text analysis
 
-## 🤝 Contributing
+Content and document mining
 
-We welcome contributions! Here's how you can help:
+Research & linguistic analysis
 
-1. **Fork the repository**
-2. **Create a feature branch**: `git checkout -b feature/amazing-feature`
-3. **Commit your changes**: `git commit -m 'Add amazing feature'`
-4. **Push to the branch**: `git push origin feature/amazing-feature`
-5. **Open a Pull Request**
+AI / NLP portfolio projects
+
+
+# 🤝 Contributing
+
+Contributions are welcome!
+
+Fork the repository
+
+# Create a new branch
+
+git checkout -b feature/new-feature
+
+
+# Commit your changes
+
+git commit -m "Add new feature"
+
+Push and open a Pull Request
+
+# 📄 License
+
+This project is licensed under the MIT License.
 
 <div align="center">
 
-**Made with ❤️ for the NLP community**
+Made with ❤️ for NLP & AI learners
 
-⭐ **Star this repository if you found it helpful!** ⭐
+⭐ Star this repository if you find it useful! ⭐
 
 </div>
