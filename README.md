@@ -1,10 +1,13 @@
 # 🔥 WordCraft AI – NLP Analytics Platform
 
+
 WordCraft AI is an interactive Natural Language Processing (NLP) web application built with Flask and NLTK.
 It enables advanced text analysis including tokenization, stemming, lemmatization, POS tagging, NER, n-grams, word frequency analysis, and automatic text summarization through a clean web interface.
 
-#🚀 Features
-#📝 Text Processing
+
+# 🚀 Features
+
+# 📝 Text Processing
 
 Word, sentence, whitespace, and blank-line tokenization
 
@@ -126,7 +129,9 @@ Click Analyze
 View NLP results and insights
 
 
+
 # 📁 Project Structure
+
 WordCraft-AI/
 ├── app.py                 # Flask application
 
@@ -145,9 +150,13 @@ WordCraft-AI/
 
 # 📋 Requirements
 Flask==2.3.3
+
 nltk==3.8.1
+
 gensim==4.3.2
+
 numpy==1.24.3
+
 scipy==1.10.1
 
 
